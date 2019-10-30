@@ -16,6 +16,8 @@ import { IndexComponent } from './index/index.component';
 import { ResponsesComponent } from './responses/responses.component';
 import { GameComponent } from './game/game.component';
 import { QuestionComponent } from './question/question.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { QuestionComponent } from './question/question.component';
     IndexComponent,
     ResponsesComponent,
     GameComponent,
-    QuestionComponent
+    QuestionComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,8 @@ import { QuestionComponent } from './question/question.component';
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatSliderModule,
+    HttpClientModule,
+    MatDialogModule
 
   ],
   providers: [],

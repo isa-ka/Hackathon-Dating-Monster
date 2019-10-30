@@ -9,9 +9,9 @@
 <form>
     <div >
         <div class="gender">
-        <mat-form-field>
+        <mat-form-field required>
             <mat-label>Vous êtes interéssé par ?</mat-label>
-            <mat-select [(value)]="selected">
+            <mat-select [(value)]="selected" required>
                 <mat-option value="Hommes">Hommes</mat-option>
                 <mat-option value="Femmes">Femmes</mat-option>
                 <mat-option value="Autres">Autres</mat-option>
@@ -52,7 +52,10 @@
         </mat-radio-group><br />
     </div>
 </form>
-    <div class="gender"><button routerLink="/game">Résultat</button></div>
+    <div class="gender"><button mat-raised-button routerLink="/game">Résultat</button></div>
 
+    <div *ngFor="let m of monsters">
+        <img [src]="m.picture"/>
+    </div>
 
 </div>
