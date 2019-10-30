@@ -1,0 +1,26 @@
+.indexContainer {
+  background-image: url(src/assets/Img/backgroundindex.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  margin : 0;
+  padding: auto;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  }
+button{
+    width: 15%;
+    height: 10%;
+    font-size: 32px;
+  }
+p{
+    color: white;
+    margin-bottom: 10%;
+    font-size: 85px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
