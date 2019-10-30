@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
+import { FormsModule } from '@angular/forms';
 //import { ResponsesComponent } from './responses/responses.component';
 //import { QuestionComponent } from './question/question.component';
 import { GameComponent } from './game/game.component';

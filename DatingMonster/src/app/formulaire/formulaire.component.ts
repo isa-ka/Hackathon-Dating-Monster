@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
   
+  cardMonster : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -17,5 +19,10 @@ export class FormulaireComponent implements OnInit {
     }
 
     return value;
+  }
+
+  sendContact(){
+    this.cardMonster=true;
+    return this.cardMonster;
   }
 }
