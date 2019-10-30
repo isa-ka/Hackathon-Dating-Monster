@@ -6,15 +6,15 @@
             <h2>Quel type de partenaire recherchez-vous ?</h2>
         </div>
 
-    <form>
+    <form >
         <div >
             <div class="gender">
             <mat-form-field>
-                <mat-label>Vous êtes intéressé par ?</mat-label>
+                <mat-label required>Vous êtes intéressé par ?</mat-label>
                 <mat-select [(value)]="selected" required>
-                    <mat-option value="Hommes" >Hommes</mat-option>
-                    <mat-option value="Femmes" >Femmes</mat-option>
-                    <mat-option value="Autres" >Autres</mat-option>
+                    <mat-option value="Hommes" id='homme'>Hommes</mat-option>
+                    <mat-option value="Femmes" id='femme'>Femmes</mat-option>
+                    <mat-option value="Autres" id='autre'>Autres</mat-option>
                 </mat-select>
             </mat-form-field>
                 
@@ -54,12 +54,10 @@
         </div>
     </form>
         <div class="gender">
-                <button mat-raised-button (click)='sendContact()'> Resultat</button>
-                    <div *ngIf="cardMonster" >
-                        Vous avez rendez vous avec:
-                            <img src='/assets/Img/monstre.jpg'/>
-                            <button onclick='window.location.reload(false)'>Recommencer</button>
-                            <button routerLink='/game'>Accepter</button>                           
+                <button *ngIf="preForms" mat-raised-button (click)='sendContact()'> Resultat</button>
+                    <div *ngIf="cardMonster" class="gender">
+                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/>
+                            <button routerLink='/game' mat-raised-button > C'est parti !</button>
                     </div>
         </div>
 
