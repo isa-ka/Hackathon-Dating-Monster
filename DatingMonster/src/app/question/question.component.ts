@@ -9,16 +9,14 @@ import { Question } from '../question';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
   @Input() question: Question;
   @Output() responseClick = new EventEmitter<Response>();
 
   constructor() { }
  
 
-  ngOnInit() {
-   
-  }
+  ngOnInit() {}
+  
 
   updateQuestion(response: Response)
   {
