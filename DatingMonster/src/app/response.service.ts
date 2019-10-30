@@ -15,6 +15,14 @@ export class ResponseService {
 
   constructor() { }
 
+  sendResponse(response: Response)
+  {
+    this.seductionPoints = this.seductionPoints + response.seduction;
+    this.index++;
+    this.currentQuestion = this.questions[this.index];
+    console.log(this.currentQuestion);
+    return this.currentQuestion;
+  }
  
 
 }

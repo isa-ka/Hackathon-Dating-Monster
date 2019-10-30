@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from '../question';
 import { ResponseService } from '../response.service';
+import { Response } from '../response';
 
 @Component({
   selector: 'app-game',
@@ -18,5 +19,14 @@ export class GameComponent implements OnInit {
    this.questions = this.responseService.questions;
    this.currentQuestion = this.responseService.currentQuestion;
   }
+
+  nextQuestion(response: Response)
+  {
+    this.currentQuestion = this.responseService.sendResponse(response);
+  }
+ 
+
+
+  
 
 }
