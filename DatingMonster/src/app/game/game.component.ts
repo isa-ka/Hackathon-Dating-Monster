@@ -11,6 +11,7 @@ export class GameComponent implements OnInit {
 
   questions: Question[];
   currentQuestion: Question;
+  numberBackground = 0;
 
   constructor(public responseService: ResponseService) { }
 
