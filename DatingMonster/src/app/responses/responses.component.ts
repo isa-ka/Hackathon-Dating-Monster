@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '../response';
+import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-responses',
@@ -43,11 +44,18 @@ export class ResponsesComponent implements OnInit {
     new Response("Oui !", 11, 10),
     new Response("Non !", 11, -50),
   ]
-
+  responsesIndexQuestion: Response[]= [];
   constructor() { }
 
-  ngOnInit() {
-    console.log();
+  ngOnInit() { }
+   
+  maFunction(index: number){
+    for (let i =0; i < this.responses.length; i++){
+      if(this.responses[i].idQuestion == index){
+        this.responsesIndexQuestion.push(this.responses[i])
+      }
+    }
+    return this.responsesIndexQuestion;
   }
 
   

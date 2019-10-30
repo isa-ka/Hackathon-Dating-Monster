@@ -23,8 +23,6 @@ export class QuestionComponent implements OnInit {
   ];
   firstQuestion: string = this.questions[0] 
 
-  firstQuestion : string = this.questions[0];
-
   constructor() { }
 
   ngOnInit() {
