@@ -1,1 +1,6 @@
-<div> {{firstQuestion }}</div>
+
+<div>
+    {{ question?.name }}
+</div>
+<app-responses [responses]="question.responses"></app-responses>
+
