@@ -23,9 +23,7 @@ export class ResponsesComponent implements OnInit {
 
   sendResponse(response: Response)
   {
-    
-    this.seductionPoints = this.seductionPoints + response.seduction;
-    
+    this.seductionPoints = this.seductionPoints + response.seduction; 
   }
 
 
