@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-question',
-  templateUrl: './.component.html',
-  styleUrls: ['./.component.css']
+  templateUrl: './question.component.html',
+  styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-  questions: = 
-  ["Bonjour, désolé je ressemble pas vraiment à ma photo de profil.",
+  questions: string[] = 
+  ["Bonjour, désolé je ne ressemble pas vraiment à ma photo de profil.",
     "Tu veux boire quelque chose?",
     "Pour moi ce sera un wisky pur feu, j'ai écorché des gens toutes la journée.",
     "Et pourtant ça fait deux siècles que je fais ça et je compte bien continuer les deux prochains siècles.",
@@ -19,12 +19,15 @@ export class QuestionComponent implements OnInit {
     "Après cette altércation vous décidez de partir, où allez vous?",
     "J'ai passé une horrible soirée",
     "On va boire un dernier verre ?",
-    "Voulez-vous hanter ces jours et ces nuits jusqu'à ce que l'appocalypse vous sépare. "
+    "Voulez-vous hanter ses jours et ses nuits jusqu'à ce que l'appocalypse vous sépare? "
   ];
+  firstQuestion: string = this.questions[0] 
 
   constructor() { }
 
   ngOnInit() {
+    this.firstQuestion
   }
+  
 
 }
