@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {routes} from './app-routing.module'
+import { RouterModule,  } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,11 +12,19 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 
+import { IndexComponent } from './index/index.component';
+import { ResponsesComponent } from './responses/responses.component';
+import { GameComponent } from './game/game.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    IndexComponent,
+    ResponsesComponent,
+    GameComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +33,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatRadioModule,
     MatSliderModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatSliderModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
