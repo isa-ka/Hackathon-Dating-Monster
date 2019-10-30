@@ -8,13 +8,15 @@ import { ResponseService } from '../response.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  questions: Question []= this.response_service.questions
-  currentIndex: number = 0;
+
+  questions: Question[];
   currentQuestion: Question;
-  constructor(public response_service: ResponseService) { }
+
+  constructor(public responseService: ResponseService) { }
 
   ngOnInit() {
-    this.currentQuestion = this.questions[this.currentIndex];
+   this.questions = this.responseService.questions;
+   this.currentQuestion = this.responseService.currentQuestion;
   }
 
 }

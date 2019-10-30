@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Response } from '../response';
 import { ResponseService } from '../response.service';
+import { Question } from '../question';
 
 @Component({
   selector: 'app-responses',
@@ -8,15 +9,20 @@ import { ResponseService } from '../response.service';
   styleUrls: ['./responses.component.css']
 })
 export class ResponsesComponent implements OnInit {
-  @Input() response: Response;
-  @Output() sendResponse = new EventEmitter<Response>();
 
-  constructor(public response_service: ResponseService) { 
-  }
+  @Input() responses: Response[];
+
+  constructor() {}
 
   ngOnInit() {
 
   }
+
+  sendResponse(response: Response)
+  {
+    
+  }
+  
 
 
   

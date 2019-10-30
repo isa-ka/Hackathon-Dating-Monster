@@ -9,14 +9,12 @@ import { Question } from '../question';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-  @Input() question: Question ;
-  
+  @Input() question: Question;
 
-  constructor(public response_service: ResponseService) { }
+  constructor() { }
+ 
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
   
 
 }
