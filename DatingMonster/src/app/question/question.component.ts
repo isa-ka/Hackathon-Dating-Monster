@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ResponseService } from '../response.service';
 import { Question } from '../question';
 
@@ -11,12 +11,18 @@ import { Question } from '../question';
 export class QuestionComponent implements OnInit {
 
   @Input() question: Question;
+  @Output() responseClick = new EventEmitter<Response>();
 
   constructor() { }
  
 
   ngOnInit() {
    
+  }
+
+  updateQuestion(response: Response)
+  {
+    this.responseClick.emit(response);
   }
 
 }

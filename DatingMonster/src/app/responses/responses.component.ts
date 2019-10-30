@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Response } from '../response';
 import { ResponseService } from '../response.service';
 import { Question } from '../question';
@@ -11,6 +11,7 @@ import { Question } from '../question';
 export class ResponsesComponent implements OnInit {
 
   @Input() responses: Response[];
+  @Output() responseClick = new EventEmitter<Response>();
 
   constructor() {}
 
@@ -20,7 +21,7 @@ export class ResponsesComponent implements OnInit {
 
   sendResponse(response: Response)
   {
-    
+    this.responseClick.emit(response);
   }
   
 
