@@ -1,6 +1,57 @@
-<h1>Dating Monster</h1>
+<div class="background">
 
-<h2>Quel type de partenaire recherchez-vous ?</h2>
+    <div>
+        <h1>Dating Monster</h1>
 
+        <h2>Quel type de partenaire recherchez-vous ?</h2>
+    </div>
 
-<mat-slide-toggle>Slide me!</mat-slide-toggle>
+<form>
+    <div >
+        <div class="gender">
+        <mat-form-field>
+            <mat-label>Vous êtes interéssé par ?</mat-label>
+            <mat-select [(value)]="selected">
+                <mat-option value="Hommes">Hommes</mat-option>
+                <mat-option value="Femmes">Femmes</mat-option>
+                <mat-option value="Autres">Autres</mat-option>
+            </mat-select>
+        </mat-form-field>
+            
+        <p>Vous avez selectionné: {{selected}}</p><br />
+        <label>Quel âge doit-il/elle avoir ?</label><br />
+        <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="100"
+            min="100"
+            max="1000">
+        </mat-slider><br />
+
+    Personnalité: <br />    
+        </div>
+    </div>
+    <div class="gender">
+        <label>Romantique:</label>
+        <mat-radio-group>
+            <mat-radio-button value="1">Créature des marais</mat-radio-button>
+            <mat-radio-button value="2">Greg</mat-radio-button>
+            <mat-radio-button value="3">Dracula</mat-radio-button>
+        </mat-radio-group>
+        <label>Rebel:</label>
+        <mat-radio-group>
+                <mat-radio-button value="1">Option 1</mat-radio-button>
+                <mat-radio-button value="1">Option 1</mat-radio-button>
+                <mat-radio-button value="3">Monstre de Frankenstein</mat-radio-button>
+        </mat-radio-group>
+        <label>Sportif:</label>
+        <mat-radio-group>
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group><br />
+    </div>
+    <div class="gender"><button mat-raised-button>Résultat</button></div>
+</form>
+
+</div>

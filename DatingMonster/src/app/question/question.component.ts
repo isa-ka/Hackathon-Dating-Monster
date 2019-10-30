@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./.component.css']
 })
 export class QuestionComponent implements OnInit {
-  questions: = 
+  /*questions: = 
   ["Bonjour, désolé je ressemble pas vraiment à ma photo de profil.",
     "Tu veux boire quelque chose?",
     "Pour moi ce sera un wisky pur feu, j'ai écorché des gens toutes la journée.",
@@ -20,7 +20,7 @@ export class QuestionComponent implements OnInit {
     "J'ai passé une horrible soirée",
     "On va boire un dernier verre ?",
     "Voulez-vous hanter ces jours et ces nuits jusqu'à ce que l'appocalypse vous sépare. "
-  ];
+  ];*/
 
   constructor() { }
 

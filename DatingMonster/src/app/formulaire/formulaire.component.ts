@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire.component.css']
 })
 export class FormulaireComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
   }
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
 
+    return value;
+  }
 }
