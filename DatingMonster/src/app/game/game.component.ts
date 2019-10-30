@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Question } from '../question';
+import { ResponseService } from '../response.service';
 
 @Component({
   selector: 'app-game',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  questions: Question[];
+  currentQuestion: Question;
+
+  constructor(public responseService: ResponseService) { }
 
   ngOnInit() {
+   this.questions = this.responseService.questions;
+   this.currentQuestion = this.responseService.currentQuestion;
   }
 
 }

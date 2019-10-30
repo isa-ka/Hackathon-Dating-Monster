@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Response } from '../response';
 import { ResponseService } from '../response.service';
+import { Question } from '../question';
 
 @Component({
   selector: 'app-responses',
@@ -9,24 +10,19 @@ import { ResponseService } from '../response.service';
 })
 export class ResponsesComponent implements OnInit {
 
-  responses: Response[];
-  seductionPoints: number = 0;
+  @Input() responses: Response[];
 
-  constructor(public response_service: ResponseService) { 
-  }
+  constructor() {}
 
   ngOnInit() {
-    this.responses = this.response_service.showResponses(0);
-    console.log(this.responses);
-    console.log(this.seductionPoints)
+
   }
 
   sendResponse(response: Response)
   {
     
-    this.seductionPoints = this.seductionPoints + response.seduction;
-    
   }
+  
 
 
   
