@@ -13,6 +13,7 @@ export class ResponseService {
   currentQuestion: Question = this.questions[this.index];
   seductionPoints: number = 0;
 
+
   constructor() { }
 
   sendResponse(response: Response)
@@ -20,9 +21,6 @@ export class ResponseService {
     this.seductionPoints = this.seductionPoints + response.seduction;
     this.index++;
     this.currentQuestion = this.questions[this.index];
-    console.log(this.currentQuestion);
     return this.currentQuestion;
-  }
- 
-
+  };
 }

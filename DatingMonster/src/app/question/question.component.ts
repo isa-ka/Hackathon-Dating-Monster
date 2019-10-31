@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ResponseService } from '../response.service';
 import { Question } from '../question';
 
-
+ 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
