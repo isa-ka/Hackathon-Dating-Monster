@@ -3,14 +3,14 @@
         <div>
             <h1>Dating Monster</h1>
 
-            <h2>Quel type de partenaire recherchez-vous ?</h2>
+            <h3>Quel type de partenaire recherchez-vous ?</h3>
         </div>
 
     <form >
         <div >
             <div class="gender">
-            <mat-form-field>
-                <mat-label required>Vous êtes intéressé par ?</mat-label>
+            <mat-form-field class="formGender">
+                <h3><mat-label required>Vous êtes intéressé par ?</mat-label></h3>
                 <mat-select [(value)]="selected" required>
                     <mat-option value="Hommes" id='homme'>Hommes</mat-option>
                     <mat-option value="Femmes" id='femme'>Femmes</mat-option>
@@ -19,7 +19,7 @@
             </mat-form-field>
                 
             <p>Vous avez selectionné: {{selected}}</p><br />
-            <label>Quel âge doit-il/elle avoir ?</label><br />
+            <h3><label>Quel âge doit-il/elle avoir ?</label></h3><br />
             <mat-slider
                 thumbLabel
                 [displayWith]="formatLabel"
@@ -29,35 +29,36 @@
                 required>
             </mat-slider><br />
 
-        Personnalité: <br />    
+            <h3>Personnalité:</h3> <br />    
             </div>
         </div>
-        <div class="gender">
-            <label>Romantique:</label>
-            <mat-radio-group required>
+        <div class="gender" >
+            <label>Romantique:</label><br/>
+            <mat-radio-group required class="formPersonalite">
                 <mat-radio-button value="1">Créature des marais</mat-radio-button>
                 <mat-radio-button value="2">Greg</mat-radio-button>
                 <mat-radio-button value="3">Dracula</mat-radio-button>
-            </mat-radio-group>
-            <label>Rebel:</label>
-            <mat-radio-group required>
+            </mat-radio-group><br/>
+            <label>Rebel:</label><br/>
+            <mat-radio-group required class="formPersonalite">
                     <mat-radio-button value="1">Option 1</mat-radio-button>
                     <mat-radio-button value="1">Option 1</mat-radio-button>
                     <mat-radio-button value="3">Monstre de Frankenstein</mat-radio-button>
-            </mat-radio-group>
-            <label>Sportif:</label>
-            <mat-radio-group required>
+            </mat-radio-group><br/>
+            <label>Sportif:</label><br/>
+            <mat-radio-group required class="formPersonalite">
                 <mat-radio-button value="1">Option 1</mat-radio-button>
                 <mat-radio-button value="1">Option 1</mat-radio-button>
                 <mat-radio-button value="2">Option 2</mat-radio-button>
             </mat-radio-group><br />
         </div>
     </form>
-        <div class="gender">
+        <div class="gender" >
                 <button *ngIf="preForms" mat-raised-button (click)='sendContact()'> Resultat</button>
-                    <div *ngIf="cardMonster" class="gender">
-                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/>
-                            <button routerLink='/game' mat-raised-button > C'est parti !</button>
+                    <div *ngIf="cardMonster" class="gender" class='buttonForm'>
+                            <h2>Vous avez rendez vous avec la MOMIE !</h2>
+                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/><br/>
+                            <button routerLink='/game' mat-raised-button class="buttonFinal" > C'est parti !</button> 
                     </div>
         </div>
 

@@ -1,0 +1,12 @@
+button {
+    width: 1000px;
+    height: 50px;
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-family: "Monster";
+}
+@font-face
+{
+    font-family: 'Monster';
+    src: url('src/assets/Police/monster_of_south_st/Monster of South St.ttf');
+}
