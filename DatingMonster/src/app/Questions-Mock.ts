@@ -176,11 +176,11 @@ export let QUESTIONS: Question[] =
         ]
     },
     {
-        name: "On va boire un dernier verre ?",
+        name: "C'est pas faux. On va boire un dernier verre ?",
         responses: 
         [
             {
-                text: "Je peux pas je suis en collocation en fausse commune",
+                text: "Désolé je suis en colocation en fosse commune",
                 seduction: -5
             },
             {
