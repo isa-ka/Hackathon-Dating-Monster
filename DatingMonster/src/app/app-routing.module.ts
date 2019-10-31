@@ -6,12 +6,16 @@ import { FormsModule } from '@angular/forms';
 //import { QuestionComponent } from './question/question.component';
 import { GameComponent } from './game/game.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { GameOverComponent } from './game-over/game-over.component';
+import { VictoryComponent } from './victory/victory.component';
 
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
   {path: 'formulaire', component: FormulaireComponent},
   { path: 'game', component: GameComponent},
+  { path : 'gameover' , component : GameOverComponent},
+  { path : 'victory' , component : VictoryComponent}
   //{ path: 'reponse', component: ResponsesComponent},
   //{ path: 'question', component: QuestionComponent},
 ];

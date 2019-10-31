@@ -80,16 +80,13 @@ export let QUESTIONS: Question[] =
         [
             {
                 text: "Il y a ce nouveau club Lucifer, ça te dit d'y faire un tour ?",
-                seduction: 10
+                seduction: +30
             },
             {
                 text: "On va au cimetière",
                 seduction: -50
             },
-            {
-                text: "Je danse une valse endiablée",
-                seduction: 0  
-            }
+
         ]
     },
     {
@@ -198,7 +195,7 @@ export let QUESTIONS: Question[] =
         [
             {
                 text: "Oui !",
-                seduction: 10
+                seduction: 500
             },
             {
                 text: "Non !",

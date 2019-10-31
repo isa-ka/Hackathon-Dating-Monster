@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { JaugeComponent } from './jauge/jauge.component';
+import { GameOverComponent } from './game-over/game-over.component';
+import { VictoryComponent } from './victory/victory.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { JaugeComponent } from './jauge/jauge.component';
     GameComponent,
     QuestionComponent,
     JaugeComponent,
+    GameOverComponent,
+    VictoryComponent,
   ],
   imports: [
     BrowserModule,

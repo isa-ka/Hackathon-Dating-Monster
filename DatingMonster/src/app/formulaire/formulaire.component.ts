@@ -10,7 +10,7 @@ import { FormControl, Validators, FormsModule } from '@angular/forms';
 })
 export class FormulaireComponent implements OnInit {
   monsters: Monster[];
-  
+  color: string;
   value : string;
   cardMonster : boolean = false;
   preForms : boolean = true;
