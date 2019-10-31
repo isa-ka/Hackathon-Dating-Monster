@@ -12,6 +12,8 @@ export class ResponseService {
   index: number = 0;
   currentQuestion: Question = this.questions[this.index];
   seductionPoints: number = 0;
+  audio;
+
 
   constructor() { }
 
@@ -20,9 +22,6 @@ export class ResponseService {
     this.seductionPoints = this.seductionPoints + response.seduction;
     this.index++;
     this.currentQuestion = this.questions[this.index];
-    console.log(this.currentQuestion);
     return this.currentQuestion;
-  }
- 
-
+  };
 }

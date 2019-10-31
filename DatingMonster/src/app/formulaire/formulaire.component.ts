@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { Monster } from '../monster';
 import { FormControl, Validators, FormsModule } from '@angular/forms';
@@ -14,6 +14,7 @@ export class FormulaireComponent implements OnInit {
   value : string;
   cardMonster : boolean = false;
   preForms : boolean = true;
+  currentRandomMonster: Monster;
 
   constructor(private gameService: GameService) { }
 
@@ -33,8 +34,8 @@ export class FormulaireComponent implements OnInit {
 
   sendContact(){
     this.cardMonster=true;
-    this.preForms=false;
-    return this.preForms;  
+    /* this.currentRandomMonster = this.monsters[Math.floor(Math.random() * this.monsters.length)];
+    return this.currentRandomMonster; */
   }
 
   
