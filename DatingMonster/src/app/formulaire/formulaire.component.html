@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="gender">
-            <label>Quel est le niveau de romantisme de votre partenaire ?</label><br /><br />
+            <label>Quel est le niveau de romantisme de votre partenaire ?</label><br />
             <mat-slider
             thumbLabel
             [displayWith]="formatLabel"
@@ -50,17 +50,18 @@
             max="10"
             required>
         </mat-slider><br />  
+        <button class="buttonMatch" *ngIf="preForms" mat-raised-button (click)='sendContact()'> Match !</button>
         </div>
-         <button *ngIf="preForms" mat-raised-button (click)='sendContact()'> Match !</button>
+         
     </form>
-   
     </div>
-        <div class="right">
+       
                 
-                    <div *ngIf="cardMonster" class="gender">
-                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/>
+                    <div *ngIf="cardMonster" class="right">
+                        <h3>Vous avez rendez-vous avec ...</h3>
+                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/><br/>
                             <button routerLink='/game' mat-raised-button > C'est parti !</button>
                     </div>
-        </div>
+       
 
 </div>

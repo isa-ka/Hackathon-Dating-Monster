@@ -1,4 +1,7 @@
 <div *ngFor="let response of responses">
-    <button (click)="sendResponse(response)">{{ response.text }}</button>
+    <div ng-app="classApp" ng-controller="classCtrl">
+            <button (click)="sendResponse(response)">{{ response.text }}</button>
+    </div>
+    
 </div>
 

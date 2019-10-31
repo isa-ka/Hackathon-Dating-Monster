@@ -1,12 +1,22 @@
 button {
-    width: 1000px;
+    width: 90%;
     height: 50px;
     margin-bottom: 16px;
     font-size: 32px;
     font-family: "Monster";
+    border-radius: 5%;
+}
+button:hover {
+    width: 95%;
+    height: 60px;
+    margin-bottom: 16px;
+    font-family: "Monster";
+    cursor: pointer;
+    background-color: indianred;
 }
 @font-face
 {
     font-family: 'Monster';
     src: url('src/assets/Police/monster_of_south_st/Monster of South St.ttf');
 }
+

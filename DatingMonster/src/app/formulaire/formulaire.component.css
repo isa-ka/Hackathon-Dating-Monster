@@ -1,13 +1,12 @@
 
 .background {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: nowrap;
     color: white;
-    background-image: url(https://www.caminteresse.fr/content/uploads/2016/10/noir.jpg);
+    background-image: url(https://ae01.alicdn.com/kf/HTB16Nc1ayDxK1Rjy1zcq6yGeXXax/Evening-Village-Scary-Pumpkin-Fence-Windmill-photo-backdrop-High-quality-Computer-print-Halloween-background.jpg);
     background-repeat: round;
     background-size: 100% auto;
     width: 100%;
@@ -52,4 +51,23 @@ h1{
 }
 .buttonFinal{
     margin-left: 220px;
+}
+
+h1{
+    color: indianred;
+  font-style: italic;
+  font-family: 'Title';
+  font-size: 5em;
+  text-align: center;
+}
+
+.right
+{
+    text-align: center;
+}
+
+@font-face
+{
+    font-family: 'Title';
+    src: url('../../assets/Police/youmurdererbb_reg.ttf');
 }

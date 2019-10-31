@@ -1,5 +1,18 @@
 <div class="gameContainer" [style.background-image]="backgroundImage">
     <app-question [question]="currentQuestion" (responseClick)="nextQuestion($event)"></app-question>
-    <img src='assets/Img/momie.png'/>
+    <div class="monsterJauge">
+            <img src='assets/Img/momie.png'/>
+            
+            <div class="jauge">
+                    <img src="../../assets/Img/broken-heart.png"/>
+                    <app-jauge></app-jauge>
+                    <img src="../../assets/Img/hearts.png"/>
+                    
+                    
+            </div>
+            <h4 style="color: white;">Tu me plais bien toi ...</h4>
+            
+    </div>
+   
 </div>
-<app-jauge></app-jauge>
+

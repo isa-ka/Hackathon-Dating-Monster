@@ -1,15 +1,21 @@
 .questionContainer{
     font-size: 40px;
+    width: 100%;
+    text-align: center;
 }
 .questionDiv{
     margin-bottom: 300px;
-    margin-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     background-color: rgb(245, 229, 229);
     border-radius: 7%;
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: "Monster";
     text-align: center;
+    
 
 }
 
