@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameOverComponent implements OnInit {
 
+  audio;
   constructor() { }
 
   ngOnInit() {

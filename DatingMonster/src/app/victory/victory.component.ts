@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VictoryComponent implements OnInit {
 
+   audio;
+
   constructor() { }
 
   ngOnInit() {
+    this.audio = new Audio('../../assets/mariage.mp3');
+    this.audio.play();
   }
 
 }
