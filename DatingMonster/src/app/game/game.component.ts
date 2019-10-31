@@ -22,6 +22,8 @@ export class GameComponent implements OnInit {
   ngOnInit() {
    this.questions = this.responseService.questions;
    this.currentQuestion = this.responseService.currentQuestion;
+   this.audio = new Audio('../../assets/shub4.mp3');
+   this.audio.play();
    console.log(this.numberBackground1);
   }
 
