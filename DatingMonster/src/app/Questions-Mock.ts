@@ -3,7 +3,7 @@ import { Question } from './question';
 export let QUESTIONS: Question[] = 
 [
     {
-        name: "Bonjour, désolé je ressemble pas vraiment à ma photo de profil.",
+        name: "Bonjour, désolé je ne ressemble pas vraiment à ma photo de profil.",
         responses: 
         [
             {

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Question } from '../question';
 import { ResponseService } from '../response.service';
 import { Response } from '../response';
+
 
 @Component({
   selector: 'app-game',
@@ -11,7 +12,8 @@ import { Response } from '../response';
 export class GameComponent implements OnInit {
 
   questions: Question[];
-  currentQuestion: Question; 
+  currentQuestion: Question;
+  audio;
   numberBackground1 : number;
   backgroundImage: string ;
 
@@ -25,6 +27,8 @@ export class GameComponent implements OnInit {
   nextQuestion(response: Response)
   {
     this.currentQuestion = this.responseService.sendResponse(response);
+    this.audio = new Audio('../../assets/shub4.mp3');
+    this.audio.play();
     this.numberBackground1 = this.responseService.index;
     this.changeBackground();
     console.log(this.numberBackground1);
