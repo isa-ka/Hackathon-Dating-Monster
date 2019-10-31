@@ -22,6 +22,7 @@ export class GameComponent implements OnInit {
   ngOnInit() {
    this.questions = this.responseService.questions;
    this.currentQuestion = this.responseService.currentQuestion;
+   console.log(this.numberBackground1);
   }
 
   nextQuestion(response: Response)
@@ -31,25 +32,42 @@ export class GameComponent implements OnInit {
     this.audio.play();
     this.numberBackground1 = this.responseService.index;
     this.changeBackground();
-    console.log(this.numberBackground1);
   }
 
   changeBackground(){
     if (this.numberBackground1 < 5){
       this.backgroundImage = "url(/assets/Img/backgroundBar.jpg)";
+      console.log(this.numberBackground1);
     }
     if (this.numberBackground1 >= 5 && this.numberBackground1 < 9 ){
       this.backgroundImage = "url(/assets/Img/clublucifer.jpg)";
+      console.log(this.numberBackground1);
+      if ( this.responseService.seductionPoints <=30){
+        this.redirectgameOver();
+      }
     }
     if (this.numberBackground1 >= 9 && this.numberBackground1 < 11 ){
       this.backgroundImage = "url(/assets/Img/cimetiere.jpg)";
+      console.log(this.numberBackground1);
     }
-    if (this.numberBackground1 >=11  ){
+    if (this.numberBackground1  >= 11  ){
       this.backgroundImage = "url(/assets/Img/eglise.jpg)";
+      console.log(this.numberBackground1);
+      if ( this.responseService.seductionPoints >= 200 )
+        this.redirectVictory();
+      else{
+        this.redirectgameOver();
+      }
     }
   }
  
+  redirectgameOver(){
+    window.location.pathname = "/gameover"
+  }
 
+  redirectVictory(){
+    window.location.pathname = "/victory"
+  }
 
   
 
