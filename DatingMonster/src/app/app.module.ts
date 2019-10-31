@@ -11,6 +11,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 import { IndexComponent } from './index/index.component';
 import { ResponsesComponent } from './responses/responses.component';
@@ -42,6 +44,7 @@ import { FormsModule } from '@angular/forms';
     MatSliderModule,
     HttpClientModule,
     MatDialogModule,
+    MatProgressBarModule,
     FormsModule
   ],
   providers: [],
