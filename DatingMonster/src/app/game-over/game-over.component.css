@@ -1,0 +1,43 @@
+.gameOver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/25/d8/08/25d808626ec84698eb64356057f0e1fe.jpg);
+    background-repeat: round;
+    background-size: 100% auto;
+    color:indianred;
+    font-family: 'Title';
+}
+h2 {
+    font-size: 100px;
+    font-family: 'Title';
+}
+p {
+    font-size: 45px;
+    font-family: 'Title';
+    color: white;
+}
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5%;
+}
+button:hover {
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5%;
+    background-color: indianred;
+}
+
+@font-face
+{
+    font-family: 'Title';
+    src: url('../../assets/Police/youmurdererbb_reg.ttf');
+}

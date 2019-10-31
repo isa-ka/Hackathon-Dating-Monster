@@ -13,6 +13,10 @@
     height: 100vh;
     margin : 0;
     padding: auto;
+    opacity: 0.8;
+    -webkit-filter: grayscale(25%);
+    filter: grayscale(25%);
+    
 }
 mat-slider {
     width: 300px;

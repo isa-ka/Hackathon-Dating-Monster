@@ -11,7 +11,7 @@
             <div class="gender">
             <mat-form-field class="formGender">
                 <h3><mat-label required>Vous êtes intéressé par ?</mat-label></h3>
-                <mat-select [(value)]="selected" required>
+                <mat-select [(value)]="selected" required color="warn">
                     <mat-option value="Hommes" id='homme'>Les hommes</mat-option>
                     <mat-option value="Femmes" id='femme'>Les femmes</mat-option>
                     <mat-option value="Autres" id='autre'>Les autres</mat-option>
@@ -19,7 +19,7 @@
             </mat-form-field>
                 
             <p>Vous avez selectionné: {{selected}}</p><br /><br />
-            <label>Quel âge doit avoir votre partenaire ?</label><br />
+            <h3><label>Quel âge doit avoir votre partenaire ?</label></h3><br />
             <mat-slider
                 thumbLabel
                 [displayWith]="formatLabel"
@@ -41,7 +41,7 @@
             required>
         </mat-slider><br />  
             
-            <label>A quel point doit-il être sportif ?</label><br />  
+            <h3><label>A quel point doit-il être sportif ?</label></h3><br />  
             <mat-slider
             thumbLabel
             [displayWith]="formatLabel"
