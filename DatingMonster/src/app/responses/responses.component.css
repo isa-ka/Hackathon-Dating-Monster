@@ -4,6 +4,7 @@ button {
     margin-bottom: 16px;
     font-size: 32px;
     font-family: "Monster";
+    border-radius: 30px;
 }
 @font-face
 {
