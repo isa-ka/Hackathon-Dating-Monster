@@ -3,14 +3,14 @@
         <div style="text-align: center;">
             <h1>Dating Monster</h1>
 
-            <h2>Quel type de partenaire recherchez-vous ?</h2>
+            <h3>Quel type de partenaire recherchez-vous ?</h3>
         </div>
 
     <form >
         <div >
             <div class="gender">
-            <mat-form-field>
-                <mat-label required>Vous êtes intéressé par ?</mat-label>
+            <mat-form-field class="formGender">
+                <h3><mat-label required>Vous êtes intéressé par ?</mat-label></h3>
                 <mat-select [(value)]="selected" required>
                     <mat-option value="Hommes" id='homme'>Les hommes</mat-option>
                     <mat-option value="Femmes" id='femme'>Les femmes</mat-option>

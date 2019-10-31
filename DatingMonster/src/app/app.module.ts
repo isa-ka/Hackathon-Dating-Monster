@@ -11,8 +11,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 
 import { IndexComponent } from './index/index.component';
 import { ResponsesComponent } from './responses/responses.component';
@@ -21,6 +20,7 @@ import { QuestionComponent } from './question/question.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { JaugeComponent } from './jauge/jauge.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     ResponsesComponent,
     GameComponent,
     QuestionComponent,
+    JaugeComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,8 +45,8 @@ import { FormsModule } from '@angular/forms';
     MatSliderModule,
     HttpClientModule,
     MatDialogModule,
-    MatProgressBarModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

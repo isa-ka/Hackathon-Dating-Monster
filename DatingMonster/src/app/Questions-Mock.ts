@@ -123,7 +123,7 @@ export let QUESTIONS: Question[] =
                 seduction: 0
             },
             {
-                text: "Je les sépare",
+                text: "Je le drague en retour",
                 seduction: -5  
             }
         ]

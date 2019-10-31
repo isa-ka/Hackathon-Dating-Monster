@@ -1,7 +1,8 @@
 
 .background {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
@@ -24,8 +25,8 @@ mat-slider {
 }
 
 img{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
 
 .result{
@@ -33,6 +34,22 @@ img{
     flex-direction: column;
 }
 
-form{
+h1{
     text-align: center;
+}
+
+.formGender{
+    width: 225px;
+}
+.formPersonalite{
+    text-align: center;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.buttonForm{
+    align-self: baseline;
+}
+.buttonFinal{
+    margin-left: 220px;
 }
