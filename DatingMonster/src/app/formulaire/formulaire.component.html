@@ -1,58 +1,68 @@
 <div class="background">
+    <div class="left">
+        <div style="text-align: center;">
+            <h1>Dating Monster</h1>
 
-    <div>
-        <h1>Dating Monster</h1>
+            <h3>Quel type de partenaire recherchez-vous ?</h3>
+        </div>
 
-        <h2>Quel type de partenaire recherchez-vous ?</h2>
-    </div>
-
-<form>
-    <div >
+    <form >
+        <div >
+            <div class="gender">
+            <mat-form-field class="formGender">
+                <h3><mat-label required>Vous êtes intéressé par ?</mat-label></h3>
+                <mat-select [(value)]="selected" required color="warn">
+                    <mat-option value="Hommes" id='homme'>Les hommes</mat-option>
+                    <mat-option value="Femmes" id='femme'>Les femmes</mat-option>
+                    <mat-option value="Autres" id='autre'>Les autres</mat-option>
+                </mat-select>
+            </mat-form-field>
+                
+            <p>Vous avez selectionné: {{selected}}</p><br /><br />
+            <h3><label>Quel âge doit avoir votre partenaire ?</label></h3><br />
+            <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="100"
+                min="100"
+                max="1000"
+                required>
+            </mat-slider><br />  
+            </div>
+        </div>
         <div class="gender">
-        <mat-form-field>
-            <mat-label>Vous êtes interéssé par ?</mat-label>
-            <mat-select [(value)]="selected">
-                <mat-option value="Hommes">Hommes</mat-option>
-                <mat-option value="Femmes">Femmes</mat-option>
-                <mat-option value="Autres">Autres</mat-option>
-            </mat-select>
-        </mat-form-field>
-            
-        <p>Vous avez selectionné: {{selected}}</p><br />
-        <label>Quel âge doit-il/elle avoir ?</label><br />
-        <mat-slider
+            <h3><label>Quel est le niveau de romantisme de votre partenaire ?</label></h3><br /><br />
+            <mat-slider
             thumbLabel
             [displayWith]="formatLabel"
-            tickInterval="100"
-            min="100"
-            max="1000">
-        </mat-slider><br />
-
-    Personnalité: <br />    
+            tickInterval="2"
+            min="0"
+            max="10"
+            required>
+        </mat-slider><br />  
+            
+            <h3><label>A quel point doit-il être sportif ?</label></h3><br />  
+            <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="2"
+            min="0"
+            max="10"
+            required>
+        </mat-slider><br />  
         </div>
+        <div class='gender'>
+         <button *ngIf="preForms" mat-raised-button (click)='sendContact()'> Match !</button>
+        </div>
+    </form>
+   
     </div>
-    <div class="gender">
-        <label>Romantique:</label>
-        <mat-radio-group>
-            <mat-radio-button value="1">Créature des marais</mat-radio-button>
-            <mat-radio-button value="2">Greg</mat-radio-button>
-            <mat-radio-button value="3">Dracula</mat-radio-button>
-        </mat-radio-group>
-        <label>Rebel:</label>
-        <mat-radio-group>
-                <mat-radio-button value="1">Option 1</mat-radio-button>
-                <mat-radio-button value="1">Option 1</mat-radio-button>
-                <mat-radio-button value="3">Monstre de Frankenstein</mat-radio-button>
-        </mat-radio-group>
-        <label>Sportif:</label>
-        <mat-radio-group>
-            <mat-radio-button value="1">Option 1</mat-radio-button>
-            <mat-radio-button value="1">Option 1</mat-radio-button>
-            <mat-radio-button value="2">Option 2</mat-radio-button>
-        </mat-radio-group><br />
-    </div>
-</form>
-    <div class="gender"><button routerLink="/game">Résultat</button></div>
-
+        <div class="right">
+                
+                    <div *ngIf="cardMonster" class="gender">
+                            <img src='https://nsa40.casimages.com/img/2019/10/23/191023045322835216.jpg'/><br/>
+                            <button routerLink='/game' mat-raised-button > C'est parti !</button>
+                    </div>
+        </div>
 
 </div>

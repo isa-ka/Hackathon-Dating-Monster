@@ -1,1 +1,6 @@
-<div> {{ firstQuestion }} </div>
+<div class ="questionContainer">
+    <div class="questionDiv">
+        {{ question?.name }}
+    </div>
+    <app-responses [responses]="question.responses" (responseClick)="updateQuestion($event)"></app-responses>
+</div>
