@@ -55,7 +55,7 @@ export class GameComponent implements OnInit {
       console.log(this.numberBackground1);
       if ( this.responseService.seductionPoints >= 200 )
         this.redirectVictory();
-      else{
+      else if (this.responseService.seductionPoints <= 0){
         this.redirectgameOver();
       }
     }

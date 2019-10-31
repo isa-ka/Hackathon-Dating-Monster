@@ -199,7 +199,7 @@ export let QUESTIONS: Question[] =
             },
             {
                 text: "Non !",
-                seduction: -50
+                seduction: -500
             }
         ]
     },
