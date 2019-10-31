@@ -1,0 +1,20 @@
+.questionContainer{
+    font-size: 40px;
+}
+.questionDiv{
+    margin-bottom: 300px;
+    margin-left: 10px;
+    background-color: rgb(245, 229, 229);
+    border-radius: 7%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Monster";
+    text-align: center;
+
+}
+
+@font-face
+{
+    font-family: 'Monster';
+    src: url('src/assets/Police/monster_of_south_st/Monster of South St.ttf');
+}
